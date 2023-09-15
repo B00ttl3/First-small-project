@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url(bg.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #todo-form {
+            position: absolute;
+            top:50%;left:50%;transform:translate(-50%,-50%);background:#b18183;padding:2rem;
+        }
+
+        h1{
+            color: brown;
+            background-color: rgb(135, 192, 241);
+            font-size: 30px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            border-width: 3px;
+            /* position: absolute; */
+            
+        }
+        #todo-form input {
+            border: 2px dotted green;
+            text-shadow: 1px;
+            font-size: 20px;
+            background-color: transparent;
+        }
+        #todo-form button{
+            border: 2px solid black;
+            background-color: purple;
+            color: aliceblue;
+            font-size: 20px;
+            float: right;
+        }
+        #todo-form button:hover{
+            cursor: pointer;
+            background-color: blanchedalmond;
+            color: black;
+        }
+
+        ul li {
+            margin: 5%;
+        }
+
+        ul li button{
+            position: absolute;
+            right: 15px;
+        } 
+    </style>
+</head>
+<body>
+    <div id="todo-form">
+        <h1>Add and delete</h1>
+            <input type="text" id="task" placeholder="To do list...">
+            <button onclick="addTask()">Add</button>
+            <ul id="taskList"></ul>
+    </div>
+    <script src="work.js"></script>
+</body>
+</html>
